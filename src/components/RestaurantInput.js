@@ -9,13 +9,7 @@ export class RestaurantInput extends Component {
     location: ''
   }
 
-  handleOnNameChange = event => {
-    this.setState({
-      name: event.target.value
-    });
-  }
-
-  handleOnLocationChange = event => {
+  handleChange = event => {
     this.setState({
       [event.target.id]: event.target.value
     });
@@ -33,14 +27,14 @@ export class RestaurantInput extends Component {
         <p>
           <input
             type="text"
-            onChange={(event) => this.handleOnNameChange(event)}
+            onChange={(event) => this.handleChange(event)}
             id="name"
             placeholder="restaurant name" />
         </p>
         <p>
           <input
             type="text"
-            onChange={(event) => this.handleOnLocationChange(event)}
+            onChange={(event) => this.handleChange(event)}
             id="location"
             placeholder="location" />
         </p>
