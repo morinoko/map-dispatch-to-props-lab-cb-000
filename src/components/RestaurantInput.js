@@ -28,15 +28,14 @@ export class RestaurantInput extends Component {
           <input
             type="text"
             onChange={(event) => this.handleChange(event)}
-            id="location"
-            id="name"
+            name="name"
             placeholder="restaurant name" />
         </p>
         <p>
           <input
             type="text"
             onChange={(event) => this.handleChange(event)}
-            id="location"
+            name="location"
             placeholder="location" />
         </p>
         <input type="submit" />
