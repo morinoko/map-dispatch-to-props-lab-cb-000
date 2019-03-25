@@ -29,7 +29,7 @@ export class RestaurantInput extends Component {
 
   render() {
     return(
-      <form onSubmit={(event) => this.handleOnSubmit(event)}>
+      <form onSubmit={(event) => this.handleOnLocationChange(event)}>
         <p>
           <input
             type="text"
