@@ -9,20 +9,15 @@ export class RestaurantInput extends Component {
     location: ''
   }
 
- handleOnNameChange = event => {
+  handleChange = event => {
     this.setState({
-      name: event.target.value
-    });
-  }
-
-  handleOnLocationChange = event => {
-    this.setState({
-      location: event.target.value
+      [event.target.id]: event.target.value
     });
   }
 
   handleOnSubmit = event => {
     event.preventDefault();
+    
     this.props.addRestaurant(this.state);
   }
 
@@ -32,15 +27,15 @@ export class RestaurantInput extends Component {
         <p>
           <input
             type="text"
-            onChange={(event) => this.handleOnNameChange(event)}
-            value={this.state.name}
+            onChange={(event) => this.handleChange(event)}
+            id="name"
             placeholder="restaurant name" />
         </p>
         <p>
           <input
             type="text"
-            onChange={(event) => this.handleOnLocationChange(event)}
-            value={this.state.location}
+            onChange={(event) => this.handleChange(event)}
+            id="location"
             placeholder="location" />
         </p>
         <input type="submit" />
