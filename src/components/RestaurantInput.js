@@ -29,7 +29,7 @@ export class RestaurantInput extends Component {
 
   render() {
     return(
-      <form onSubmit={(event) => this.handleOnLocationChange(event)}>
+      <form onSubmit={(event) => this.handleOnNameChange(event)}>
         <p>
           <input
             type="text"
@@ -40,7 +40,7 @@ export class RestaurantInput extends Component {
         <p>
           <input
             type="text"
-            onChange={(event) => this.handleChange(event)}
+            onChange={(event) => this.handleOnNameChange(event)}
             name="location"
             placeholder="location" />
         </p>
